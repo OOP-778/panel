@@ -84,6 +84,7 @@ class Server extends Model
     protected $attributes = [
         'status' => self::STATUS_INSTALLING,
         'oom_disabled' => true,
+        'network_mode' => 'bridge'
     ];
 
     /**
@@ -133,6 +134,7 @@ class Server extends Model
         'database_limit' => 'present|nullable|integer|min:0',
         'allocation_limit' => 'sometimes|nullable|integer|min:0',
         'backup_limit' => 'present|nullable|integer|min:0',
+        'network_mode' => 'required|string'
     ];
 
     /**

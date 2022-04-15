@@ -42,6 +42,7 @@ class ServerFactory extends Factory
             'database_limit' => null,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
+            'network_mode' => 'bridge'
         ];
     }
 }

@@ -43,6 +43,7 @@ export interface Server {
     isTransferring: boolean;
     variables: ServerEggVariable[];
     allocations: Allocation[];
+    networkMode: string;
 }
 
 export const rawDataToServerObject = ({ attributes: data }: FractalResponseData): Server => ({
@@ -58,6 +59,7 @@ export const rawDataToServerObject = ({ attributes: data }: FractalResponseData)
         ip: data.sftp_details.ip,
         port: data.sftp_details.port,
     },
+    networkMode: data.network_mode,
     description: data.description ? ((data.description.length > 0) ? data.description : null) : null,
     limits: { ...data.limits },
     eggFeatures: data.egg_features || [],
