@@ -82,13 +82,11 @@
                             <div class="input-group">
                                 <input type="text" id="nNetworkMode" name="network_mode" class="form-control"
                                     value="{{ old('network_mode', 'bridge') }}" />
-                                <span class="input-group-addon">%</span>
                             </div>
 
                             <p class="text-muted small">
                                 Set docker container network mode learn more about it please see <a
-                                    href="https://docs.docker.com/network/" target="_blank">this documentation</a> for more
-                                information about it.
+                                    href="https://docs.docker.com/network/" target="_blank">this documentation</a>
                             <p>
                         </div>
 
